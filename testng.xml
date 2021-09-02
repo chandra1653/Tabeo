@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Regression">
+    <classes>
+     <class name="com.tabeo.automation.Tests.loginTestWithEmail"/>
+      <class name="com.tabeo.automation.Tests.LoginTestWithGmailOath"/>
+      <class name="com.tabeo.automation.Tests.CreateSuccessfulPaymentTest"/>
+      <class name="com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
