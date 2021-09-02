@@ -1,0 +1,4 @@
+com\tabeo\automation\framework\core\TabeoLoginPage.class
+com\tabeo\automation\Tests\loginTestWithEmail.class
+com\tabeo\automation\Tests\LoginTestWithGmailOath.class
+com\tabeo\automation\framework\core\Browser.class
