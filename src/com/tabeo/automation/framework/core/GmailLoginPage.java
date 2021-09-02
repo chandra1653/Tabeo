@@ -11,10 +11,10 @@ public class GmailLoginPage {
 	public GmailLoginPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	By gmailSignInButtonLocator = By.xpath("//a[contains(@class,'button') and contains(text(),'Sign in')]");
-	By gmailEmailORPhoneNumberInputLocator = By.xpath("//input[contains(@type,'email') and contains(@jsname,'YPqjbf')]");
-	By nextButtonLocator= By.xpath("//div//span[contains(@jsname,'V67aGc') and contains(text(),'Next')]");
-	By gmailPasswordInputLocator =By.xpath("//input[contains(@type,'password') and contains(@jsname,'YPqjbf')]");
+	public By gmailSignInButtonLocator = By.xpath("//a[contains(@class,'button') and contains(text(),'Sign in')]");
+	public By gmailEmailORPhoneNumberInputLocator = By.xpath("//input[contains(@type,'email') and contains(@jsname,'YPqjbf')]");
+	public By nextButtonLocator= By.xpath("//div//span[contains(@jsname,'V67aGc') and contains(text(),'Next')]");
+	public By gmailPasswordInputLocator =By.xpath("//input[contains(@type,'password') and contains(@jsname,'YPqjbf')]");
 	
 	
 	public WebElement gmailSignInButton() {

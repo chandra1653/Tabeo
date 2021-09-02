@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 02 01:56:59 CEST 2021</td>
+<td>Started on:</td><td>Thu Sep 02 11:04:36 CEST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>509 seconds (509256 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23690 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,13 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest.paymentDeclinedTestCase()'><b>paymentDeclinedTestCase</b><br>Test class: com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@type,&apos;submit&apos;) and contains(text(),&apos;Complete authentication&apos;)]&quot;}
+<td><div><pre>org.openqa.selenium.NoSuchFrameException: no such frame: element is not a frame
   (Session info: chrome=93.0.4577.63)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CHANDU&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_102&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\CHANDR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61265}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c197e5eeaa7b4540d528a13f8737b71
-*** Element info: {Using=xpath, value=//button[contains(@type,&apos;submit&apos;) and contains(text(),&apos;Complete authentication&apos;)]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\CHANDR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb24e9ab9b5dec17f476f3f8c79b9168
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -95,14 +93,9 @@ Session ID: 0c197e5eeaa7b4540d528a13f8737b71
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest.paymentDeclinedTestCase(UnsuccessfulPaymentCardDeclinedTest.java:46)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:872)
+	at com.tabeo.automation.framework.core.Browser.switchToFrame(Browser.java:122)
+	at com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest.paymentDeclinedTestCase(UnsuccessfulPaymentCardDeclinedTest.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -128,16 +121,14 @@ Session ID: 0c197e5eeaa7b4540d528a13f8737b71
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-</pre></div><a href='#' onClick='toggleBox("stack-trace205278236", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace205278236'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@type,&apos;submit&apos;) and contains(text(),&apos;Complete authentication&apos;)]&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace768185844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace768185844'><pre>org.openqa.selenium.NoSuchFrameException: no such frame: element is not a frame
   (Session info: chrome=93.0.4577.63)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;CHANDU&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_102&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\CHANDR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61265}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c197e5eeaa7b4540d528a13f8737b71
-*** Element info: {Using=xpath, value=//button[contains(@type,&apos;submit&apos;) and contains(text(),&apos;Complete authentication&apos;)]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\CHANDR~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb24e9ab9b5dec17f476f3f8c79b9168
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -148,14 +139,9 @@ Session ID: 0c197e5eeaa7b4540d528a13f8737b71
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest.paymentDeclinedTestCase(UnsuccessfulPaymentCardDeclinedTest.java:46)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:872)
+	at com.tabeo.automation.framework.core.Browser.switchToFrame(Browser.java:122)
+	at com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest.paymentDeclinedTestCase(UnsuccessfulPaymentCardDeclinedTest.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -182,8 +168,8 @@ Session ID: 0c197e5eeaa7b4540d528a13f8737b71
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 </pre></div></td>
-<td>269</td>
-<td>com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest@795cd85e</td></tr>
+<td>7</td>
+<td>com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest@56ac3a89</td></tr>
 </table><p>
 </body>
 </html>

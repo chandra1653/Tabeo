@@ -9,7 +9,6 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.interactions.Actions;
@@ -62,23 +61,19 @@ public class LoginTestWithGmailOath extends Browser {
 		driver.findElement(languageDropDownLocator).click();
 		By englishLanguageLocator = By.xpath(
 				"//div[contains(@jsname,'wQNmvb') and contains(@role,'option')]//span[contains(text(),'‪English (United Kingdom)‬')]");
-
 		wait.until(ExpectedConditions.elementToBeClickable(englishLanguageLocator));
 		driver.findElement(englishLanguageLocator).click();
 		waitUntilPageLoaded();
 		GmailLoginPage gmailLoginPage = new GmailLoginPage(driver);
-		JavascriptExecutor j = (JavascriptExecutor) driver;
-		if (j.executeScript("return document.readyState").toString().equals("complete")) {
-			System.out.println("Page has loaded");
-		}
 		Actions webDriverActions = new Actions(driver);
-		webDriverActions.moveToElement(gmailLoginPage.emailORPhoneNumberInput()).build().perform();
+		logger.info(safeClick(gmailLoginPage.gmailEmailORPhoneNumberInputLocator));
+		webDriverActions.click(gmailLoginPage.emailORPhoneNumberInput()).doubleClick().build().perform();
 		gmailLoginPage.emailORPhoneNumberInput().sendKeys(userDetails.getProperty("username"));
 		gmailLoginPage.nextButton().click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		gmailLoginPage.passwordInput().sendKeys(userDetails.getProperty("password"));
 		wait.until(ExpectedConditions.elementToBeClickable(gmailLoginPage.nextButton()));
-		gmailLoginPage.nextButton().click();
+		safeClick(gmailLoginPage.nextButtonLocator);
 		By qualityAssuranceBannerLocator = By.xpath("//span[contains(text(),'Quality Assurance')]");
 		try{
 			wait.until(ExpectedConditions.visibilityOfElementLocated(qualityAssuranceBannerLocator));
@@ -93,6 +88,8 @@ public class LoginTestWithGmailOath extends Browser {
 			}
 		
 	}
+
+
 	
 	
 }

@@ -39,13 +39,13 @@ public class UnsuccessfulPaymentCardDeclinedTest extends Browser{
 		setCardDetails(paymentPage.cardExpiryDate(),userDetails.getProperty("cvvexpirydate"));
 		setCardDetails(paymentPage.billingName(),userDetails.getProperty("billingname"));
 		paymentPage.subscribeButton().click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		try{
 		switchToFrame(0);
 		switchToFrame("__stripeJSChallengeFrame");
 		switchToFrame("acsFrame");
 		paymentPage.completeAuthentication().click();
 		driver.switchTo().defaultContent();
-		try{
 			if(cardDeclinedMessage.equals(paymentPage.cardDeclinedMessage().getText())){
 				logger.info("Your card payment is declined");
 			}

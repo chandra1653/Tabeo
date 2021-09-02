@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Regression(failed)">
     <classes>
+      <class name="com.tabeo.automation.Tests.loginTestWithEmail">
+        <methods>
+          <include name="loginTestWithEmailAddress"/>
+        </methods>
+      </class> <!-- com.tabeo.automation.Tests.loginTestWithEmail -->
+      <class name="com.tabeo.automation.Tests.LoginTestWithGmailOath">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tabeo.automation.Tests.LoginTestWithGmailOath -->
       <class name="com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest">
         <methods>
           <include name="closeBrowser"/>
@@ -10,6 +20,12 @@
           <include name="paymentDeclinedTestCase"/>
         </methods>
       </class> <!-- com.tabeo.automation.Tests.UnsuccessfulPaymentCardDeclinedTest -->
+      <class name="com.tabeo.automation.Tests.CreateSuccessfulPaymentTest">
+        <methods>
+          <include name="LoginToApplication"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.tabeo.automation.Tests.CreateSuccessfulPaymentTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Suite] -->
